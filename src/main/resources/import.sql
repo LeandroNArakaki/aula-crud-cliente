@@ -1,0 +1,10 @@
+INSERT INTO tb_client(name,cpf,income,birth_date,children) VALUES ('Luis Dias','000.123.333-70',0.00,2023-01-31,3);
+INSERT INTO tb_client(name,cpf,income,birth_date,children) VALUES ('Luis Dias','000.123.333-70',0.00,2023-01-31,3);
+INSERT INTO tb_client(name,cpf,income,birth_date,children) VALUES ('Luis Dias','000.123.333-70',0.00,2023-01-31,3);
+INSERT INTO tb_client(name,cpf,income,birth_date,children) VALUES ('Luis Dias','000.123.333-70',0.00,2023-01-31,3);
+INSERT INTO tb_client(name,cpf,income,birth_date,children) VALUES ('Luis Dias','000.123.333-70',0.00,2023-01-31,3);
+INSERT INTO tb_client(name,cpf,income,birth_date,children) VALUES ('Luis Dias','000.123.333-70',0.00,2023-01-31,3);
+INSERT INTO tb_client(name,cpf,income,birth_date,children) VALUES ('Luis Dias','000.123.333-70',0.00,2023-01-31,3);
+INSERT INTO tb_client(name,cpf,income,birth_date,children) VALUES ('Luis Dias','000.123.333-70',0.00,2023-01-31,3);
+INSERT INTO tb_client(name,cpf,income,birth_date,children) VALUES ('Luis Dias','000.123.333-70',0.00,2023-01-31,3);
+INSERT INTO tb_client(name,cpf,income,birth_date,children) VALUES ('Luis Dias','000.123.333-70',0.00,2023-01-31,3);
