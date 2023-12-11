@@ -40,7 +40,7 @@ public class ClientController {
     }
 
     @PostMapping
-    public ResponseEntity<ClientDTO> insert(@RequestBody ClientDTO clientDTO) {
+    public ResponseEntity<ClientDTO> insert(@Valid @RequestBody ClientDTO clientDTO) {
         clientDTO = service.insert(clientDTO);
         URI uri = ServletUriComponentsBuilder
                 .fromCurrentRequest().path("/{id}")

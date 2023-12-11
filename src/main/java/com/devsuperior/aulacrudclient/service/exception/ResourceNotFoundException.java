@@ -1,4 +1,4 @@
-package com.devsuperior.aulacrudclient.exception;
+package com.devsuperior.aulacrudclient.service.exception;
 
 public class ResourceNotFoundException extends RuntimeException{
 

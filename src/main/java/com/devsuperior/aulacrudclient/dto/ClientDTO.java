@@ -11,14 +11,15 @@ import java.time.LocalDate;
 public class ClientDTO {
 
     private Long id;
-    @NotBlank(message = "O campo NOME não pode ser vazio")
+    @NotBlank(message = "O campo nome não pode ser vazio")
+    @Size(min = 3, max = 80, message = "Nome precisa ter 3 a 80 caracteres")
     private String name;
-    @NotBlank(message = "O campo CPF não pode ser vazio")
-    @Size(max = 14)
+    @NotBlank(message = "O campo cpf não pode ser vazio")
+    @Size(max = 14, message = "CPF ")
     private String cpf;
-    @Positive(message = "O campo VALOR não pode ser negativo ou zero")
+    @Positive(message = "O campo valor não pode ser negativo ou zero")
     private Double income;
-    @PastOrPresent(message = "O campo DATA DE NASCIMENTO não pode ser futura")
+    @PastOrPresent(message = "O campo data de nascimento não pode ser futura")
     private LocalDate birthDate;
     private Integer children;
 

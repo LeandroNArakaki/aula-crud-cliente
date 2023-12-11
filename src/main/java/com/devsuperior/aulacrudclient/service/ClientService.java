@@ -2,8 +2,8 @@ package com.devsuperior.aulacrudclient.service;
 
 import com.devsuperior.aulacrudclient.dto.ClientDTO;
 import com.devsuperior.aulacrudclient.entity.Client;
-import com.devsuperior.aulacrudclient.exception.DatabaseException;
-import com.devsuperior.aulacrudclient.exception.ResourceNotFoundException;
+import com.devsuperior.aulacrudclient.service.exception.DatabaseException;
+import com.devsuperior.aulacrudclient.service.exception.ResourceNotFoundException;
 import com.devsuperior.aulacrudclient.repository.ClientRepository;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,14 +11,14 @@ import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class ClientService {
-
-
     private static String RESOUCE_NOT_FOUND = "Recurso não encontrado";
     private static String DATABASE_INTEGRITY = "Falha de integridade referencial";
+
     @Autowired
     private ClientRepository repository;
 
@@ -56,7 +56,7 @@ public class ClientService {
         }
     }
 
-    @Transactional
+    @Transactional(propagation = Propagation.SUPPORTS)
     public void delete(Long id) {
         try {
             if (!repository.existsById(id)) {
